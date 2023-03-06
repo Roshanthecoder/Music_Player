@@ -10,14 +10,13 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="H,9:9"
         android:layout_marginHorizontal="70dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/guitar"
+        app:layout_constraintDimensionRatio="H,16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </ImageView>
 
     <SeekBar
@@ -36,14 +35,15 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:fontFamily="@font/bol"
-        android:textAllCaps="false"
         android:backgroundTint="@color/teal_700"
+        android:fontFamily="@font/bol"
+        android:text="Play"
+        android:textAllCaps="false"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button2"
         app:layout_constraintVertical_bias="1.0">
@@ -54,11 +54,11 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="6"
-        android:text="Pause"
-        android:fontFamily="@font/bol"
-        android:backgroundTint="@color/teal_700"
         android:layout_marginTop="70dp"
+        android:backgroundTint="@color/teal_700"
+        android:ems="6"
+        android:fontFamily="@font/bol"
+        android:text="Pause"
         android:textAllCaps="false"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,11 +68,46 @@
 
     </Button>
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:ems="6"
+        android:fontFamily="@font/bol"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button2">
+
+    </Button>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:backgroundTint="@color/teal_700"
+        android:ems="6"
+        android:fontFamily="@font/bol"
+        android:text="Prev"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2">
+
+    </Button>
+
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier2"
         android:layout_width="wrap_content"
-        android:ems="6"
         android:layout_height="wrap_content"
+        android:ems="6"
         app:barrierDirection="top"
         app:constraint_referenced_ids="button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
